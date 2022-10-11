@@ -21,7 +21,7 @@ body {
 .title {
   color: aliceblue;
   text-align: center;
-  font-size: 3.8rem;
+  font-size: 3.9rem;
   padding-bottom: 1rem;
 }
 .mainContent {
@@ -59,4 +59,23 @@ body {
   border-bottom-left-radius: 0.8rem;
   transition: background-color 200ms ease-in-out;
   width: 50%;
+}
+
+.todo-btn {
+  padding: 1rem;
+  font-size: 1rem;
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  min-width: 100px;
+  margin-left: -0.5rem;
+}
+
+.toDoList-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  list-style: none;
 }
