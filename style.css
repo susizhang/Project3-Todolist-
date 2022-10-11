@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* margin-top: 5rem; */
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.leftContent {
+  grid-column: 1/5;
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(254, 34%, 12%, 0.973);
+  justify-content: center;
+}
+.title {
+  color: aliceblue;
+  text-align: center;
+  font-size: 3.8rem;
+  padding-bottom: 3rem;
+}
+.mainContent {
+  grid-column: 6/-1;
+}
+
+.leftimg > img {
+  /* width: 20rem; */
+  height: 30rem;
+}
