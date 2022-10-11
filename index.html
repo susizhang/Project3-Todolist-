@@ -3,8 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=#, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To do list</title>
+    <!-- Google Font: Quick Sand -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome (https://fontawesome.com) for basic icons; source: https://cdnjs.com/libraries/font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+      crossorigin="anonymous"
+    />
+
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -21,20 +36,29 @@
       <div class="form">
         <form>
           <input
+            onChange="handleChange(this.value)"
             class="todo-input"
             type="text"
-            aria-placeholder="Add a task."
+            placeholder="Add a task."
           />
-          <button class="todo-btn" type="submit">Add It</button>
+          <button class="todo-btn" type="submit">Add Task</button>
         </form>
       </div>
 
       <!-- Order lists -->
 
       <div class="toDoList-container">
-        <ul class="todo-list"></ul>
+        <ul class="todo-list">
+          <!-- (Basic Format) -->
+          <!-- <div class="todo">
+            items added to this list:
+            <li>Drink more water every Day!</li>
+            <button>delete</button>
+            <button>check</button>
+          </div> -->
+        </ul>
       </div>
     </div>
-    <script src="index.js"></script>
+    <script src="index.js" type="text/javascript"></script>
   </body>
 </html>
