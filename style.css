@@ -6,7 +6,7 @@
 
 body {
   /* margin-top: 5rem; */
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -22,13 +22,41 @@ body {
   color: aliceblue;
   text-align: center;
   font-size: 3.8rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 .mainContent {
   grid-column: 6/-1;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20%;
+  margin: 0 5rem;
+  min-height: 25vh;
+  width: 100%;
 }
 
+.leftimg {
+  display: flex;
+  justify-content: center;
+}
 .leftimg > img {
   /* width: 20rem; */
-  height: 30rem;
+  height: 39rem;
+}
+
+/* form */
+
+.form {
+  font-size: 1.7rem;
+  justify-content: center;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+.todo-input {
+  padding: 1rem;
+  font-size: 1rem;
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+  transition: background-color 200ms ease-in-out;
+  width: 50%;
 }
