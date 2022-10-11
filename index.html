@@ -9,7 +9,7 @@
     <script src="index.js"></script>
   </head>
   <body>
-    <div class="login">
+    <div class="login" style="display: none;" id="registerForm">
       <form name='form-login'>
   
           <h1>REGISTER</h1>
@@ -28,12 +28,13 @@
               <li class="uppercase">Must contain an uppercase letter.</li>
               <li class="special">Must contain a number or special character.</li>
           </ul>
+          <p onclick="changeFormToSignIn()">Already have an account?</p>
           <input id="rgstr_btn" type="submit" value="Register" onclick="store()">
   
       </form>
   </div>
   
-  <div class="login">
+  <div class="login" id="loginForm" style="display: block;" >
       <form name='form-login'>
   
           <h1>SIGN IN</h1>
@@ -44,6 +45,10 @@
           <label for="userPw">Password</label>
           <input type="password" id= "userPw" placeholder="Password" required>
   
+          <div id="noAccount">
+            <p onclick="changeForm()">Haven't got an account? Create one!</p>
+          </div>
+
           <div id="remember">
               <input type="checkbox" value="lsRememberMe" id="rememberMe"
                      style="display: inline-block;">
@@ -54,6 +59,18 @@
   
       </form>
   </div>
+
+  <script>
+      function changeForm(){
+        let loginForm = document.getElementById('loginForm').style.display = "none";
+        let registerForm = document.getElementById('registerForm').style.display ="block";
+      }
+
+      function changeFormToSignIn(){
+        let registerForm = document.getElementById('registerForm').style.display = "none";
+        let loginForm = document.getElementById('loginForm').style.display ="block";
+      }
+  </script>
   
   </body>
 </html>
