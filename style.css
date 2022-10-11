@@ -6,7 +6,8 @@
 
 body {
   /* margin-top: 5rem; */
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -25,22 +26,17 @@ body {
   padding-bottom: 1rem;
 }
 .mainContent {
-  grid-column: 6/-1;
+  grid-column: 6/12;
   display: flex;
   justify-content: flex-start;
-  padding-top: 20%;
+  padding-top: 12%;
   margin: 0 5rem;
   min-height: 25vh;
   width: 100%;
 }
 
 .leftimg {
-  display: flex;
-  justify-content: center;
-}
-.leftimg > img {
-  /* width: 20rem; */
-  height: 39rem;
+  width: 100%;
 }
 
 /* form */
@@ -58,7 +54,7 @@ body {
   border-top-left-radius: 0.8rem;
   border-bottom-left-radius: 0.8rem;
   transition: background-color 200ms ease-in-out;
-  width: 50%;
+  width: 60%;
 }
 
 .todo-btn {
