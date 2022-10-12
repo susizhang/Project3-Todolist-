@@ -1,6 +1,6 @@
 # Project3-Todolist
 
-1) Create a To do list where you can :
+1) Create a To do list where you can:
 
    -Add a Todo 
    -Mark a todo as done 
