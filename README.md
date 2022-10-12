@@ -1,14 +1,20 @@
 # Project3-Todolist
 
-Create a To do list where you can :
+1) Create a To do list where you can :
 
--Add a Todo -Mark a todo as done -Edit a Todo -Delete a Todo
+-Add a Todo 
+-Mark a todo as done 
+-Edit a Todo 
+-Delete a Todo
 
-Level 2
+2) Level 2
 
--LocalStorage -Object-oriented approach: .Think of the architecture .Code the classes with properties and methods accordingly
+-LocalStorage 
+-Object-oriented approach
+  .Think of the architecture 
+  .Code the classes with properties and methods accordingly
 
-Level 3 (Optional)
+3）Level 3 (Optional)
 
 Transform into React component for Todo / Todolist
 
