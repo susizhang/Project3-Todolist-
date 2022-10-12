@@ -1,7 +1,6 @@
 # Project3-Todolist
 
-![image](https://user-images.githubusercontent.com/111738354/195421744-d44f066a-748f-4e9b-b220-1b2cb30c85b1.png)
-
+![image](https://user-images.githubusercontent.com/111738354/195422679-e89630c4-f2ef-4ff3-9c8c-c4efa5db022e.png)
 
 1) Create a To do list where you can:
 
