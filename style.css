@@ -18,13 +18,14 @@ body {
   display: flex;
   flex-direction: column;
   background-color: hsla(254, 34%, 12%, 0.973);
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 9.5rem;
 }
 .title {
   color: aliceblue;
   text-align: center;
   font-size: 3.9rem;
-  padding-bottom: 1rem;
+  padding-bottom: 5rem;
 }
 .mainContent {
   grid-column: 5/12;
@@ -42,9 +43,10 @@ body {
 
 /* form */
 
-.form {
+.input-form {
   font-size: 1.7rem;
-  justify-content: center;
+  display: flex;
+  justify-content: flex-start;
   padding: 0.8rem;
   width: 100%;
 }
@@ -55,7 +57,7 @@ body {
   border-top-left-radius: 0.8rem;
   border-bottom-left-radius: 0.8rem;
   transition: background-color 200ms ease-in-out;
-  width: 62%;
+  width: 58%;
 }
 
 .todo-btn {
@@ -63,10 +65,11 @@ body {
   font-size: 1rem;
   border-top-right-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
-  min-width: 100px;
-  margin-left: -0.5rem;
+  min-width: 2rem;
+  margin-left: -1rem;
   color: white;
   background-color: black;
+  width: 15%;
 }
 
 .toDoList-container {
