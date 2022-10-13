@@ -6,6 +6,7 @@ const toDoList = document.querySelector(".todo-list");
 
 toDoBtn.addEventListener("click", addToDo);
 toDoList.addEventListener("click", deletecheck);
+// to load the saved todo list
 document.addEventListener("DOMContentLoaded", getTodos);
 
 // Check if one theme has been set previously and apply it (or std theme if not found):
@@ -19,15 +20,16 @@ function addToDo(event) {
   // Prevents form from submitting / Prevents form from reloading;
   event.preventDefault();
 
-  // toDo DIV;
-  const toDoDiv = document.createElement("div");
-  toDoDiv.classList.add("todo");
-
-  // Create LI
-  const newToDo = document.createElement("li");
   if (toDoInput.value === "") {
     alert("You must write something!");
   } else {
+    //toDoDIV;
+    const toDoDiv = document.createElement("div");
+    toDoDiv.classList.add("todo");
+
+    // Create LI
+    const newToDo = document.createElement("li");
+
     // newToDo.innerText = "hey";
     newToDo.innerText = toDoInput.value;
     newToDo.classList.add("todo-item");
@@ -47,6 +49,20 @@ function addToDo(event) {
     deleted.classList.add("delete-btn");
     toDoDiv.appendChild(deleted);
 
+    newToDo.addEventListener("dblclick", () => {
+      const editInput = document.createElement("input");
+      editInput.value = toDoDiv.innerText;
+      editInput.classList.add("editInput");
+      editInput.addEventListener("blur", () => {
+        newToDo.innerText = editInput.value;
+        newToDo.style.display = "list-item";
+        toDoDiv.removeChild(editInput);
+        updateLocalTodo(editInput.value, index);
+      });
+      toDoDiv.insertBefore(editInput, checked);
+      newToDo.style.display = "none";
+    });
+
     // Append to list;
     toDoList.appendChild(toDoDiv);
 
@@ -64,6 +80,10 @@ function deletecheck(event) {
     // item.parentElement.remove();
     // animation
     item.parentElement.classList.add("fall");
+
+    // Immediately delete
+
+    // item.parentElement.remove();
 
     //removing local todos;
     removeLocalTodos(item.parentElement);
@@ -102,7 +122,7 @@ function getTodos() {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
 
-  todos.forEach(function (todo) {
+  todos.forEach(function (todo, index) {
     // toDo DIV;
     const toDoDiv = document.createElement("div");
     toDoDiv.classList.add("todo", `${savedTheme}-todo`);
@@ -125,9 +145,37 @@ function getTodos() {
     deleted.classList.add("delete-btn");
     toDoDiv.appendChild(deleted);
 
+    newToDo.addEventListener("dblclick", () => {
+      const editInput = document.createElement("input");
+      editInput.value = toDoDiv.innerText;
+      editInput.classList.add("editInput");
+      editInput.addEventListener("blur", () => {
+        newToDo.innerText = editInput.value;
+        newToDo.style.display = "list-item";
+        toDoDiv.removeChild(editInput);
+        updateLocalTodo(editInput.value, index);
+      });
+      toDoDiv.insertBefore(editInput, checked);
+      newToDo.style.display = "none";
+    });
+
     // Append to list;
     toDoList.appendChild(toDoDiv);
   });
+}
+
+function updateLocalTodo(todo, index) {
+  //Check: if item/s are there;
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+
+  todos[index] = todo;
+  // console.log(todos);
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
 
 function removeLocalTodos(todo) {
