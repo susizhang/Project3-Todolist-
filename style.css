@@ -133,7 +133,9 @@ body {
 .completed {
   transition: 0.2s;
   text-decoration: line-through;
-  background-color: rgba(127, 255, 212, 0.486);
+  /* background-color: rgba(127, 255, 212, 0.486); */
+  background: linear-gradient(to right, #00aaff, #00ff6a);
+  color: aliceblue;
 }
 
 .fall {

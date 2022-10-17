@@ -61,6 +61,7 @@ function addToDo(event) {
       });
       toDoDiv.insertBefore(editInput, checked);
       newToDo.style.display = "none";
+      editInput.focus();
     });
 
     // Append to list;
@@ -157,6 +158,7 @@ function getTodos() {
       });
       toDoDiv.insertBefore(editInput, checked);
       newToDo.style.display = "none";
+      editInput.focus();
     });
 
     // Append to list;
