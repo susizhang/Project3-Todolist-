@@ -99,6 +99,11 @@ body {
   width: 70%;
 }
 
+.todo:hover {
+  cursor: pointer;
+  background-color: rgba(247, 239, 223, 0.863);
+}
+
 .todo li {
   padding: 7px;
   /* word-wrap: break-word; */
