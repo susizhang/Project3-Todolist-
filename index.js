@@ -146,6 +146,8 @@ function getTodos() {
     deleted.classList.add("delete-btn");
     toDoDiv.appendChild(deleted);
 
+    // editing
+
     newToDo.addEventListener("dblclick", () => {
       const editInput = document.createElement("input");
       editInput.value = toDoDiv.innerText;
