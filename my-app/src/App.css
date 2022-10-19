@@ -1,0 +1,9 @@
+.listElement {
+  display: flex;
+}
+
+.textInputDone {
+  background-color: green;
+  text-decoration: line-through;
+  color: white;
+}
